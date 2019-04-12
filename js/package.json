@@ -1,0 +1,16 @@
+{
+  "name": "zegorithms",
+  "version": "1.0.0",
+  "description": "worst algorithms ever",
+  "main": "main.js",
+  "preferGlobal": true,
+  "bin": "./main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "zeduado",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^2.20.0"
+  }
+}
