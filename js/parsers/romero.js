@@ -21,14 +21,21 @@ const parse = (input) => {
 
     for(let i = 0; i < input.length; i++) {
         let curr = input[i];
-        if(isNumber(curr))
-            simplified.push(curr);
+
+        if(isNumber(curr)) {
+            let elem = input.floatAt(i);
+            simplified.push(elem.get);
+            i = elem.lastIndex;
+        } 
         else if (isOperator(curr))
             reduceOperator(curr, stack, simplified);
+
         else if(isOpen(curr))
             stack.push(curr);
+
         else if(isClose(curr))
             reduce(stack, simplified);
+
         else if(!isWhiteSpace(curr))
             throw Error("token invalido");
     }
